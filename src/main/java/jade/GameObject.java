@@ -1,2 +1,5 @@
-package jade;public class GameObject {
+package jade;
+
+public class GameObject {
+
 }
