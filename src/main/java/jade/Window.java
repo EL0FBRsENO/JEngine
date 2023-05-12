@@ -3,7 +3,6 @@ package jade;
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
-import util.Time;
 
 import static java.sql.Types.NULL;
 import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
@@ -12,12 +11,12 @@ import static org.lwjgl.glfw.GLFW.glfwWindowHint;
 import static org.lwjgl.opengl.GL11.*;
 
 public class Window {
-    private int width, height;
-    private String title;
+    private final int width, height;
+    private final String title;
     private long glfwWindow;
 
     public float r, g, b, a;
-    private boolean fadeToBlack = false;
+    //private boolean fadeToBlack = false;
 
     private static Window window = null;
 
@@ -27,9 +26,9 @@ public class Window {
         this.width = 1280;
         this.height = 720;
         this.title = "Game Engine";
-        this.r = 1;
-        this.g = 1;
-        this.b = 1;
+        this.r = 1f;
+        this.g = 1f;
+        this.b = 1f;
         this.a = 1;
     }
 
@@ -120,11 +119,14 @@ public class Window {
         // binding available for use.
         GL.createCapabilities();
 
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+
         Window.changeScene(0);
     }
 
     public void loop() {
-        float beginTime = Time.getTime();
+        float beginTime = (float) glfwGetTime();
         float endTime;
         float dt = -1.0f;
 
@@ -141,7 +143,7 @@ public class Window {
 
             glfwSwapBuffers(glfwWindow);
 
-            endTime = Time.getTime();
+            endTime = (float) glfwGetTime();
             dt = endTime - beginTime;
             beginTime = endTime;
         }
