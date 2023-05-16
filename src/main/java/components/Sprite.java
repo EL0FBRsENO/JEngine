@@ -1,29 +1,20 @@
 package components;
 
+import lombok.Setter;
 import org.joml.Vector2f;
-import org.joml.Vector4f;
 import renderer.Texture;
 
-public class Sprite {
+public class Sprite extends Component {
 
-    private Texture texture;
-    private Vector2f[] texCoords;
+    private float width, height;
 
-    public Sprite(Texture texture) {
-        this.texture = texture;
-        Vector2f[] texCoords = {
-                new Vector2f(1, 1),
-                new Vector2f(1, 0),
-                new Vector2f(0, 0),
-                new Vector2f(0, 1)
-        };
-        this.texCoords = texCoords;
-    }
-
-    public Sprite(Texture texture, Vector2f[] texCoords) {
-        this.texture = texture;
-        this.texCoords = texCoords;
-    }
+    private @Setter Texture texture = null;
+    private @Setter Vector2f[] texCoords = {
+            new Vector2f(1, 1),
+            new Vector2f(1, 0),
+            new Vector2f(0, 0),
+            new Vector2f(0, 1)
+    };
 
     public Texture getTexture() {
         return this.texture;
@@ -33,4 +24,23 @@ public class Sprite {
         return this.texCoords;
     }
 
+    public float getWidth() {
+        return width;
+    }
+
+    public float getHeight() {
+        return height;
+    }
+
+    public void setWidth(float width) {
+        this.width = width;
+    }
+
+    public void setHeight(float height) {
+        this.height = height;
+    }
+
+    public int getTexId(){
+        return texture == null ? -1 : texture.getId();
+    }
 }

@@ -1,4 +1,4 @@
-package jade;
+package scenes;
 
 import org.joml.Vector2f;
 
