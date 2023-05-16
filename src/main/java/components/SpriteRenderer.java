@@ -1,7 +1,7 @@
 package components;
 
 import imgui.ImGui;
-import scenes.Transform;
+import jade.Transform;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 import renderer.Texture;

@@ -5,6 +5,7 @@ import scenes.LevelScene;
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
+import scenes.Scene;
 
 import static java.sql.Types.NULL;
 import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;

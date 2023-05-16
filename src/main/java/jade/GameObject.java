@@ -1,6 +1,5 @@
 package jade;
 
-import scenes.Transform;
 import components.Component;
 
 import java.util.ArrayList;

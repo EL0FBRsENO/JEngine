@@ -1,6 +1,5 @@
 package jade;
 
-import scenes.Transform;
 import com.google.gson.*;
 import components.Component;
 

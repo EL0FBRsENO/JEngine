@@ -4,30 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f84667f-3e81-4591-96b6-a7d6c1351ebc" name="Changes" comment="Added, spritesheets, sprites, alpha blending and z index">
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/Rigidbody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jade/ComponentDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jade/GameObjectDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jade/ImGuiLayer.java" afterDir="false" />
+    <list default="true" id="5f84667f-3e81-4591-96b6-a7d6c1351ebc" name="Changes" comment="Almost fully implemented ImGui and moved Scenes from &quot;jade&quot; to &quot;scenes&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/blendImage1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/blendImage1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/blendImage2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/blendImage2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/components/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/components/ComponentDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/ComponentDeserializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/components/FontRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/FontRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/components/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/Sprite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/components/SpriteRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/SpriteRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/components/Spritesheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/Spritesheet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jade/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jade/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jade/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jade/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jade/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jade/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jade/LevelEditorScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jade/LevelEditorScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jade/MouseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jade/MouseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jade/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jade/Scene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jade/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jade/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/renderer/Texture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/renderer/Texture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/AssetPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/AssetPool.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,16 +56,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/aronb/Downloads/gradle-enterprise-gradle-plugin-3.8.1.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/aronb/Downloads/gradle-enterprise-gradle-plugin-3.8.1.jar",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="components" />
@@ -138,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683910979471</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Almost fully implemented ImGui and moved Scenes from &quot;jade&quot; to &quot;scenes&quot;">
+      <created>1684278757598</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684278757598</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -160,7 +146,8 @@
     <MESSAGE value="Primeira commit não funfo" />
     <MESSAGE value="Added Game Objects with &quot;working&quot; Components" />
     <MESSAGE value="Added, spritesheets, sprites, alpha blending and z index" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added, spritesheets, sprites, alpha blending and z index" />
+    <MESSAGE value="Almost fully implemented ImGui and moved Scenes from &quot;jade&quot; to &quot;scenes&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Almost fully implemented ImGui and moved Scenes from &quot;jade&quot; to &quot;scenes&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

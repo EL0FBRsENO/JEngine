@@ -5,9 +5,9 @@ import imgui.callbacks.ImStrConsumer;
 import imgui.callbacks.ImStrSupplier;
 import imgui.enums.*;
 import imgui.gl3.ImGuiImplGl3;
+import scenes.Scene;
 
 import static org.lwjgl.glfw.GLFW.*;
-import static org.lwjgl.opengl.GL11.*;
 
 public class ImGuiLayer {
 
